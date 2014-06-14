@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>DuCafe</title>
+    <title>Tag: undefined | DuCafe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="sdvdxl">
@@ -22,9 +22,9 @@
     <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
 
-  <body>
-    <header>
-      <div>
+    <body>
+      <header>
+        <div>
 		
 			<div id="imglogo">
 				<a href="/"><img src="/img/logo.svg" alt="DuCafe" title="DuCafe"/></a>
@@ -59,104 +59,22 @@
 			</nav>	
 </div>
 
-    </header>
-    <div id="container" class="clearfix">
-      <div id="main">
-
-  <section class="post" itemscope itemprop="blogPost">
-  <article>
-    <h1 itemprop="name">
-      
-        <a href="/2014/06/14/博客测试/" title="博客测试" itemprop="url">
-      
-        博客测试
-      </a>
-    </h1>
-    
-     
-           <p itemprop="description" ></p>
-        
-    
-    <p class="article-more-link">
-      <time datetime="2014-06-14T09:06:52.000Z" itemprop="datePublished">6月 14 2014</time>
-      
-          <a href="/2014/06/14/博客测试/">继续阅读&raquo;</a>
-      
-    </p>
-
-  </article>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  <article>
-    <h1 itemprop="name">
-      
-        <a href="/2014/06/14/github/" title="github" itemprop="url">
-      
-        github
-      </a>
-    </h1>
-    
-     
-           <p itemprop="description" ></p>
-        
-    
-    <p class="article-more-link">
-      <time datetime="2014-06-14T08:32:58.000Z" itemprop="datePublished">6月 14 2014</time>
-      
-          <a href="/2014/06/14/github/">继续阅读&raquo;</a>
-      
-    </p>
-
-  </article>
-</section>
-
+      </header>
+      <div id="container" class="clearfix">
+          
+<div class="archive-title" >
+<h2 class="tag-icon">Tags</h2>
 
 </div>
-      
-<div id="asidepart">
-<div id="authorInfo">
-	
-		<div class="author-logo"></div>		
-	
-	
-	<div class="social-font" class="clearfix">
-		
-		
-		
-		
-	</div>
-</div>
-<aside class="clearfix">
-
-
-  
-
-  
-  <div class="archiveslist">
-    <p class="asidetitle"><a href="/archives">Archives</a></p>
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06">六月 2014</a><span class="archive-list-count">2</span></li></ul>
-  </div>
-
-
-  
-
-  <div class="linkslist">
-  <p class="asidetitle">Links</p>
-    <ul>
-      <li><a href="#" title="sdvdxl">DuCafe</a></li>
-    </ul>
+<div id="main" class="archive-part">
+<div class="all-list-box"></div>
 </div>
 
 
-</aside>
-</div>
-    </div>
-    <footer><div id="footer" >
 
-</div>
-</footer>
-    <script src="/js/jquery-2.1.0.min.js"></script>
+
+      </div>
+      <script src="/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){ 
   //back to top
@@ -234,8 +152,26 @@ $(document).ready(function(){
 
 
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var list    = $('.archive-title a'),
+      box     = $('.all-list-box'),
+      first   = $('.archive-title a:first-of-type');
+      box.load(first.attr('data-src').toString()+' #archive-page');
+      first.addClass('current');
+  list.each(function(){
+    $(this).click(function(){
+      var listSrc=$(this).attr('data-src').toString()+' #archive-page';
+      box.load(listSrc);
+      list.removeClass('current');
+      $(this).addClass('current');
+     });  
+    });
+  }); 
+</script>
 
 
 
-  </body>
- </html>
+
+    </body>
+   </html>
